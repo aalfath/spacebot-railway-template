@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/6sOnTR?utm_medium=integration&utm_source=button&utm_campaign=spacebot)
+
 # Spacebot on Railway
 
 This repo is the source of the Spacebot template on Railway. It deploys
