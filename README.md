@@ -1,4 +1,4 @@
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/6sOnTR?utm_medium=integration&utm_source=button&utm_campaign=spacebot)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/1wLsV6?utm_medium=integration&utm_source=button&utm_campaign=spacebot)
 
 # Spacebot on Railway
 
