@@ -18,8 +18,10 @@ public domain. Caddy asks for HTTP Basic Auth on every route except `/healthz`,
 which Railway's health check uses, and passes everything else to Spacebot over
 Railway's private network.
 
-Each folder has its own `Dockerfile` and `railway.json` (build settings, health
-check, restart policy).
+Each folder has its own `Dockerfile`. Health checks (`/api/health` on Spacebot,
+`/healthz` on Caddy) and the restart policy are part of the Railway template
+itself, not of this repo: Railway no longer reads `railway.json` for new
+services ([Config as Code is deprecated](https://docs.railway.com/infrastructure-as-code)).
 
 ## Variables
 

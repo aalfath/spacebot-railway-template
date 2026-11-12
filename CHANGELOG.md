@@ -6,6 +6,8 @@ Each entry is one template version. Breaking changes come first.
 
 First version of the repo-based template.
 
+- Health checks (`/api/health` on Spacebot, `/healthz` on Caddy) and the restart policy (on failure, 10 retries) are set in the Railway template, not in a `railway.json`, because Railway no longer reads Config as Code for new services.
+
 - Spacebot `ghcr.io/spacedriveapp/spacebot:v0.5.0@sha256:ccd9411f72def62b192e44aed23446b94e6e4774d55d7100a94de1531029f6ed`.
 - Caddy `caddy:2.11.9-alpine@sha256:0bbb055bda6793c999bde78b1b5ce3e89f829fb031af2cf50056ea1246559fee` with HTTP Basic Auth in front of Spacebot.
 - `BASIC_AUTH_PASSWORD` is generated with 48 characters. bcrypt rejects passwords longer than 72 bytes, so the older template's 128-character password crashed Caddy.
