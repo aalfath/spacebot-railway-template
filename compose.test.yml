@@ -1,0 +1,14 @@
+# Local test only (not used by Railway). The upstream here is a stand-in,
+# because the test sandbox can't pull ghcr.io images.
+services:
+  stub:
+    image: caddy:2.11.9-alpine@sha256:0bbb055bda6793c999bde78b1b5ce3e89f829fb031af2cf50056ea1246559fee
+    command: ["caddy", "respond", "--listen", ":19898", "--body", "spacebot-stub"]
+  caddy:
+    build: ./caddy
+    environment:
+      BASIC_AUTH_USERNAME: admin
+      BASIC_AUTH_PASSWORD: ${TEST_PW}
+      SPACEBOT_UPSTREAM: stub:19898
+      PORT: "8080"
+    ports: ["8080"]
